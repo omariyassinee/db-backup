@@ -1,0 +1,16 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Backup artifacts and logs
+backup/
+*.dump
+*.sql
+*.backup
+*.log
+
+# Compiled binary & dependencies
+db-backup
+node_modules/
+dist/

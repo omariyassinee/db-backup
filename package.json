@@ -1,0 +1,29 @@
+{
+  "name": "db-backup",
+  "version": "1.1.0",
+  "description": "Zero-dependency PostgreSQL backup, restore, retention pruning, and Telegram bot CLI for Bun and Node.js",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omariyassinee/db-backup.git"
+  },
+  "bin": {
+    "db-backup": "./db-backup.ts",
+    "db-backup-bot": "./bot-daemon.ts"
+  },
+  "scripts": {
+    "backup": "bun db-backup.ts backup --all",
+    "bot": "bun bot-daemon.ts",
+    "build": "bun build --compile --minify db-backup.ts --outfile db-backup",
+    "typecheck": "bun check .",
+    "lint": "bun-canary lint"
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5"
+  }
+}
